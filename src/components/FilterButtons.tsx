@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface FilterButtonsProps {
   setFilter: (index: number) => void;
@@ -11,10 +11,6 @@ const FilterButtons = ({ setFilter }: FilterButtonsProps) => {
     setClickedIndex(index);
     setFilter(index);
   };
-
-  useEffect(() => {
-    console.log(clickedIndex);
-  }, [clickedIndex]);
 
   return (
     <span id="filter-buttons-container">
