@@ -23,7 +23,7 @@ const ExtensionsGrid = ({ filter }: ExtensionsGridProps) => {
   useEffect(() => {
     async function fetchExtensions() {
       try {
-        const res = await fetch("data.json");
+        const res = await fetch("/public/data.json");
         let data = await res.json();
         setExtensionsData(data);
         localStorage.setItem("extensions", JSON.stringify(data));
